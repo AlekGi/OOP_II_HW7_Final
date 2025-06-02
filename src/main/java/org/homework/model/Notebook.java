@@ -10,15 +10,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Notebook implements Serializable, IFileOperations {
-    private List<Note> notes;
+    private final List<Note> notes;
     private static final long serialVersionUID = 1L;
 
     public Notebook() {
         this.notes = new ArrayList<>();
-    }
-
-    public List<Note> getNotes() {
-        return new ArrayList<>(notes);
     }
 
     public void addNotes(Note note) {
